@@ -1,0 +1,1093 @@
+
+
+/* ----Universal--- */
+.dark-mode {
+  background-color: #020a13;
+}
+.dark-mode .p-font{
+  color: #c6c6c6;
+}
+.dark-mode .darkbutton{
+  color: white;
+}
+.dark-mode #icons-single1 {
+    color: white;
+}
+.dark-mode #icons-single2{
+  color: white;
+}
+#glitch-laptop{
+  display: none;
+}
+#glitch-mobile{
+  display: none;
+}
+.mobile-nav{
+  display: none;
+
+}
+
+
+body {
+  
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  -webkit-font-smoothing: antialiased;
+}
+
+.achertag{
+  text-decoration: none;
+}
+.achertag:hover{
+  text-decoration:underline;
+}
+.p-font{
+  line-height: 35px;
+  font-size: 15px;
+  font-family:homereg, sans-serif;
+  color: #545454;
+  
+}
+
+.p-foot{
+  margin-top: 25px;
+}
+
+/* ---button backgroung color for -- darkmode--- */
+.dark-mode .buttons{
+  background-color: #091521;
+  color:#c6c6c6;
+}
+
+.buttons{
+  background-color: #f4f1ee;
+  border: none;
+  border-radius: 5px;
+  color: black;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  line-height: 30px;
+  font-size: 13px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family:homereg, sans-serif;
+  color: #000;
+  transition: all 0.4s ease 0s;
+  padding: 1px 12px;
+}
+.dark-mode .buttons:hover{
+  background-color:#3c70a6;
+}
+.buttons:hover{
+  background-color: #0cd030;
+  color: #f4f1ee;
+}
+
+/* ---dark Mood-- arrow-in--- */
+.dark-mode .arrow-ani{
+  color: #c6c6c6;
+}
+
+.arrow-ani{
+  margin-left: 10px;
+  transition: all;
+  animation: arrow1 1.2s infinite ease;
+  color:#545454;
+  font-family: homereg, sans-serif;
+  font-weight: 400;
+  
+}
+@keyframes arrow1 {
+  0%{
+    margin-left: 10px;
+  }
+  50%{
+    margin-left: 20px;
+  }
+  100%{
+    margin-left: 10px;
+  }
+}
+
+/* ---resume--view--download---Laptop---- */
+.dark-mode .resume-v-d{
+  color: #c6c6c6;
+}
+
+.resume-v-d{
+  text-decoration: none;
+  color: black;
+  font-weight: 700;
+  font-family: homebig, sans-serif;
+}
+.resume-v-d:hover{
+  text-decoration: underline;
+  color: #0056b3;
+}
+.darkbutton{
+  background-color: transparent;
+}
+.laptop-nav{
+  display: none;
+}
+
+
+  
+
+
+
+/* ----Universal---- */
+
+/* ---Media key -- laptop--- */
+/*  */
+
+@media only screen and (min-width: 1008px){
+  /* ---backgrount text---*/
+  .background-text1 {
+    position: fixed;
+    white-space: nowrap;
+    overflow: auto;
+  }
+  .pdf-container{
+    display: none;
+  }
+  .arrowa{
+    text-decoration: none;
+    color: #545454;
+  }
+
+  .background-text2 {
+    display: block;
+    margin-top: 485px;
+    margin-left: -40px;
+    z-index: -1;
+    color: #c8b9b9;
+    font-family: 'Abril Fatface', cursive;
+    font-size:200px;
+    opacity: 0.2;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    animation: splash 1s normal ease-in-out;
+  }
+  @keyframes splash {
+    from {
+      opacity: 2;
+      color:whitesmoke;
+      transform:translateX(-20px);
+    }
+        
+    to {
+      transform:translateX(0);
+    }
+  }
+  .background-text1:hover{
+    cursor: default;
+  }
+  /* ---backgrount text--- */
+
+  /* ---background text for project---- */
+  .background-text-ver1 {
+    position: fixed;
+    white-space: nowrap;
+    overflow: auto;
+    transform: rotate(90deg);
+    margin-top: 1%;
+    margin-left: -300px;
+  }
+
+  .background-text-ver2 {
+    /* border: solid red 2px; */
+    display: block;
+ 
+    
+    z-index: -1;
+    color: #c8b9b9;
+    font-family: 'Abril Fatface', cursive;
+    font-size:200px;
+    opacity: 0.2;
+    -webkit-user-select: none; /* Safari */
+    -ms-user-select: none; /* IE 10 and IE 11 */
+    user-select: none; /* Standard syntax */
+    animation: splash 1s normal ease-in-out;
+  }
+  @keyframes splash {
+    from {
+      opacity: 2;
+      color:whitesmoke;
+      transform:translateX(-20px);
+    }
+        
+    to {
+      transform:translateX(0);
+    }
+  }
+  .background-text1:hover{
+    cursor: default;
+  }
+  /* ---background text for project---- */
+
+  /* ----Home Symbol--For-Dark-Mood--- */
+  .dark-mode .homesymbol{
+    color: #c6c6c6;
+  }
+
+  /* ---HomeSymbol--- */
+  .homesymbol{
+    position: absolute;
+    /* border: solid red 2px; */
+    z-index: 1;
+    text-decoration: none;
+    color: black;
+    font-size: 2.0rem;
+    font-family: home, sans-serif;
+    line-height: 30px;
+    margin-top: 3.5%;
+    margin-left: 13%;
+    white-space: nowrap;
+  }
+  .homesymbol:hover{
+      cursor: pointer;
+  }
+  /* ---HomeSymbol--- */
+    
+  /* ---p--- */
+  .p-fonts{
+    margin-top: 25px;
+  }
+  /* ---p--- */
+
+  /* --Nav Bar-- */
+  nav{
+    position: absolute;
+    /* border-bottom: solid grey 1px; */
+        
+    width: 500px;
+    margin-top: 2.7%;
+    margin-left: 57%;
+    line-height: 22px;
+
+  }
+  li{
+        
+    display: inline;
+        
+  }
+  .navin{
+    text-align: center;
+    padding: 14px 16px;
+    font-size: calc(var(--font-sm) + 0.9px);
+    font-family: homereg, sans-serif;
+    text-rendering: geometricprecision;
+    background-color: transparent;
+    display: inline-block;
+  }
+  #navin{
+      text-align: center;
+      padding: 14px 16px;
+      display: inline-block;
+      color: #545454;
+  }
+  .lii{
+    border-bottom: 2px;
+  }
+  
+  /* ---for dark mood---lines--- */
+  .dark-mode #cool-link::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: white;
+    transition: width .3s;
+  }
+  .dark-mode #cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+  }
+  .dark-mode #on-this-page{
+    background-color: #091521;
+    border: none;
+    border-radius: 10px;
+    color: #c6c6c6;
+  }
+
+  /* ---for dark mood lines----- */
+  .laptop-nav{
+    display: block;
+  }
+
+  #cool-link::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #000;
+    transition: width .3s;
+  }
+
+  #cool-link:hover::after {
+    width: 100%;
+    transition: width .3s;
+  }
+  #on-this-page{
+    background-color: #f4f1ee;
+    border: none;
+    border-radius: 10px;
+    color: black;
+    
+  }
+
+
+  @keyframes lines {
+    0%{
+      border-width: 0%;
+    }
+    50%{
+      border-width: 25%;
+    }
+    100%{
+      border-width: 100%;
+    }
+    
+  }
+  /* #about{
+    border: solid red 2px;
+    border-radius: 10px;
+  } */
+    /* --Nav Bar-- */
+
+    /* ---Article--- */
+  .art{
+    position: absolute;
+    z-index: 2;
+    /* border: solid red 2px; */
+    width: 62%;
+    margin-left: 19.4%;
+    margin-top: 11.29%;
+    text-align: left;
+  }
+  /* ---Article--- */
+
+  /* ---Font Glitch--- */
+  .glitchs {
+    color: black;
+    font-size: 61px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* ---Font Glitch--- fordark */
+  .dark-mode .glitchs {
+    color: #e1e1e1;
+    font-size: 61px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+    /* ---Font Glitch--- */
+    h1{
+      font-family: Blorado, sans-serif;
+      text-rendering: geometricprecision;
+      font-style: normal;
+      font-weight: 900;
+      line-height: 74px;  
+    }
+    #glitch-laptop{
+      display: block;
+    }
+    .dark-mode .glitch{
+      color: white;
+    }
+      .glitch {
+        color: black;
+        font-size: 61px;
+        position: relative;
+        margin: 0 auto;
+      }
+      
+      @keyframes noise-anim {
+        0% {
+          clip: rect(74px, 9999px, 39px, 0);
+        }
+        5% {
+          clip: rect(30px, 9999px, 37px, 0);
+        }
+        10% {
+          clip: rect(36px, 9999px, 4px, 0);
+        }
+        15% {
+          clip: rect(50px, 9999px, 24px, 0);
+        }
+        20% {
+          clip: rect(98px, 9999px, 46px, 0);
+        }
+        25% {
+          clip: rect(83px, 9999px, 51px, 0);
+        }
+        30% {
+          clip: rect(18px, 9999px, 26px, 0);
+        }
+        35% {
+          clip: rect(6px, 9999px, 95px, 0);
+        }
+        40% {
+          clip: rect(24px, 9999px, 51px, 0);
+        }
+        45% {
+          clip: rect(94px, 9999px, 30px, 0);
+        }
+        50% {
+          clip: rect(93px, 9999px, 88px, 0);
+        }
+        55% {
+          clip: rect(68px, 9999px, 55px, 0);
+        }
+        60% {
+          clip: rect(79px, 9999px, 70px, 0);
+        }
+        65% {
+          clip: rect(82px, 9999px, 2px, 0);
+        }
+        70% {
+          clip: rect(8px, 9999px, 73px, 0);
+        }
+        75% {
+          clip: rect(95px, 9999px, 27px, 0);
+        }
+        80% {
+          clip: rect(9px, 9999px, 25px, 0);
+        }
+        85% {
+          clip: rect(94px, 9999px, 87px, 0);
+        }
+        90% {
+          clip: rect(37px, 9999px, 26px, 0);
+        }
+        95% {
+          clip: rect(26px, 9999px, 25px, 0);
+        }
+        100% {
+          clip: rect(24px, 9999px, 87px, 0);
+        }
+      }
+      .dark-mode .glitch:after{
+        background: black;
+        color: white;
+      }
+      .glitch:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        color: black;
+        background:white;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim 2s infinite linear alternate-reverse;
+      }
+      
+      @keyframes noise-anim-2 {
+        0% {
+          clip: rect(63px, 9999px, 74px, 0);
+        }
+        5% {
+          clip: rect(53px, 9999px, 25px, 0);
+        }
+        10% {
+          clip: rect(63px, 9999px, 7px, 0);
+        }
+        15% {
+          clip: rect(95px, 9999px, 40px, 0);
+        }
+        20% {
+          clip: rect(32px, 9999px, 20px, 0);
+        }
+        25% {
+          clip: rect(58px, 9999px, 75px, 0);
+        }
+        30% {
+          clip: rect(26px, 9999px, 23px, 0);
+        }
+        35% {
+          clip: rect(2px, 9999px, 38px, 0);
+        }
+        40% {
+          clip: rect(89px, 9999px, 85px, 0);
+        }
+        45% {
+          clip: rect(95px, 9999px, 53px, 0);
+        }
+        50% {
+          clip: rect(99px, 9999px, 53px, 0);
+        }
+        55% {
+          clip: rect(71px, 9999px, 41px, 0);
+        }
+        60% {
+          clip: rect(78px, 9999px, 52px, 0);
+        }
+        65% {
+          clip: rect(85px, 9999px, 49px, 0);
+        }
+        70% {
+          clip: rect(89px, 9999px, 65px, 0);
+        }
+        75% {
+          clip: rect(53px, 9999px, 54px, 0);
+        }
+        80% {
+          clip: rect(31px, 9999px, 90px, 0);
+        }
+        85% {
+          clip: rect(63px, 9999px, 94px, 0);
+        }
+        90% {
+          clip: rect(72px, 9999px, 11px, 0);
+        }
+        95% {
+          clip: rect(39px, 9999px, 33px, 0);
+        }
+        100% {
+          clip: rect(4px, 9999px, 59px, 0);
+        }
+      }
+      .dark-mode .glitch:before{
+        color: white;
+        background: black;
+      }
+      .glitch:before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: black;
+        background:white;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+      }
+
+    /* ---Font Glitch--- */
+
+  .icons{
+    font-size: 20px;
+    margin-top: 35px;
+  }
+
+  #icons-single1{
+    /* border: solid red 1px; */
+    color: #545454;
+  }
+  #icons-single1:hover{
+    font-weight: 900;
+  }
+  #icons-single2{
+    /* border: solid red 1px; */
+    margin-left: 32px;
+    color: #545454;
+  }
+  #icons-single2:hover{
+    font-weight: 900;
+
+  }
+  .iconsdont{
+    display: none;
+  }
+
+  /* ---For the resume--- */
+  
+  .icons1{
+    font-size: 20px;
+    margin-top: 1px;
+  }
+  #icons1-single1{
+    /* border: solid red 1px; */
+    color: #545454;
+  }
+  #icons1-single1:hover{
+    font-weight: 900;
+  }
+  #icons1-single2{
+    /* border: solid red 1px; */
+    margin-left: 32px;
+    color: #545454;
+  }
+  #icons1-single2:hover{
+    font-weight: 900;
+
+  }
+  /* ---For the resume--- */
+
+
+    
+}
+/* ---Media key -- laptop--- */
+/*  */
+
+/* ---Universal */
+ul{
+    list-style-type: none;
+}
+.navin{
+    text-decoration: none;
+    color: gray;
+}
+
+/*  */
+
+
+
+@media only screen and (max-width: 1007px){
+    .background-text2{
+        display: none;
+    }
+    .background-text-ver2{
+      display: none;
+  }
+}
+
+/* ----For Mobile Resposives----- */
+/*  */
+@media (max-width:992px) {
+  /* ---For the icons--- */
+  .icons {
+    position: sticky;
+    backdrop-filter: blur(6px) saturate(2.5);
+    display: flex;
+    right: 0px;
+    z-index: 999;
+    -webkit-box-align: center;
+    align-items: center;
+    justify-content: space-evenly;
+    background: transparent;
+    width: 100% !important;
+    padding: 0px !important;
+    flex-direction: row !important;
+    height: 60px !important;
+    bottom: 0px !important;
+    
+  }
+  .icons1{
+    display: none;
+  }
+
+  /* iiiiiiccccccoooooonnnnnssss */
+  /*  */
+  /* .icons{
+    font-size: 20px;
+    margin-top: 35px;
+  } */
+  #icons-single1{
+    /* border: solid red 1px; */
+    color: #545454;
+    font-weight: 900;
+  }
+  #icons-single1:hover{
+    font-weight: 900;
+  }
+  #icons-single2{
+    /* border: solid red 1px; */
+    /* margin-left: 32px; */
+    color: #545454;
+    font-weight: 900;
+  }
+  #icons-single2:hover{
+    font-weight: 900;
+
+  }
+  /*  */
+  /*  */
+
+
+
+  /* ---For the icons--- */
+
+  /* ---Home-Symbole---- */
+  .dark-mode .homesymbol{
+    color: #c6c6c6;
+  }
+  .homesymbol{
+    position: absolute;
+    /* border: solid red 2px; */
+    z-index: 4;
+    text-decoration: none;
+    color: black;
+    font-size: 2.0rem;
+    font-family: home, sans-serif;
+    line-height: 30px;
+    margin-top: 3.7%;
+    margin-left: 3%;
+    white-space: nowrap;
+  }
+  .homesymbol:hover{
+    cursor: pointer;
+  }
+  /* ---Home-Symbole---- */
+
+  
+
+
+
+
+  .art{
+    position: absolute;
+    z-index: 4;
+    margin-top: 38%;
+    margin-left: 3%;
+  }
+  /* ---Font Glitch--- */
+  .glitchs {
+    color: black;
+    font-size: 61px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+  /* ---Font Glitch--- fordark */
+  .dark-mode .glitchs {
+    color: #e1e1e1;
+    font-size: 61px;
+    position: relative;
+    margin: 0 auto;
+  }
+
+    /* ---Font Glitch--- */
+    h1{
+      font-family: Blorado, sans-serif;
+      text-rendering: geometricprecision;
+      font-style: normal;
+      font-weight: 900;
+      /* line-height: 74px;   */
+    }
+    #glitch-mobile{
+      display: block;
+    }
+    .dark-mode .glitch{
+      color: white;
+    }
+      .glitch {
+        color: black;
+        font-size: 50px;
+        position: relative;
+        margin: 0 auto;
+      }
+      
+      @keyframes noise-anim {
+        0% {
+          clip: rect(74px, 9999px, 39px, 0);
+        }
+        5% {
+          clip: rect(30px, 9999px, 37px, 0);
+        }
+        10% {
+          clip: rect(36px, 9999px, 4px, 0);
+        }
+        15% {
+          clip: rect(50px, 9999px, 24px, 0);
+        }
+        20% {
+          clip: rect(98px, 9999px, 46px, 0);
+        }
+        25% {
+          clip: rect(83px, 9999px, 51px, 0);
+        }
+        30% {
+          clip: rect(18px, 9999px, 26px, 0);
+        }
+        35% {
+          clip: rect(6px, 9999px, 95px, 0);
+        }
+        40% {
+          clip: rect(24px, 9999px, 51px, 0);
+        }
+        45% {
+          clip: rect(94px, 9999px, 30px, 0);
+        }
+        50% {
+          clip: rect(93px, 9999px, 88px, 0);
+        }
+        55% {
+          clip: rect(68px, 9999px, 55px, 0);
+        }
+        60% {
+          clip: rect(79px, 9999px, 70px, 0);
+        }
+        65% {
+          clip: rect(82px, 9999px, 2px, 0);
+        }
+        70% {
+          clip: rect(8px, 9999px, 73px, 0);
+        }
+        75% {
+          clip: rect(95px, 9999px, 27px, 0);
+        }
+        80% {
+          clip: rect(9px, 9999px, 25px, 0);
+        }
+        85% {
+          clip: rect(94px, 9999px, 87px, 0);
+        }
+        90% {
+          clip: rect(37px, 9999px, 26px, 0);
+        }
+        95% {
+          clip: rect(26px, 9999px, 25px, 0);
+        }
+        100% {
+          clip: rect(24px, 9999px, 87px, 0);
+        }
+      }
+      .dark-mode .glitch:after{
+        background: black;
+        color: white;
+      }
+      .glitch:after {
+        content: attr(data-text);
+        position: absolute;
+        left: 2px;
+        text-shadow: -1px 0 red;
+        top: 0;
+        color: black;
+        background:white;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim 2s infinite linear alternate-reverse;
+      }
+      
+      @keyframes noise-anim-2 {
+        0% {
+          clip: rect(63px, 9999px, 74px, 0);
+        }
+        5% {
+          clip: rect(53px, 9999px, 25px, 0);
+        }
+        10% {
+          clip: rect(63px, 9999px, 7px, 0);
+        }
+        15% {
+          clip: rect(95px, 9999px, 40px, 0);
+        }
+        20% {
+          clip: rect(32px, 9999px, 20px, 0);
+        }
+        25% {
+          clip: rect(58px, 9999px, 75px, 0);
+        }
+        30% {
+          clip: rect(26px, 9999px, 23px, 0);
+        }
+        35% {
+          clip: rect(2px, 9999px, 38px, 0);
+        }
+        40% {
+          clip: rect(89px, 9999px, 85px, 0);
+        }
+        45% {
+          clip: rect(95px, 9999px, 53px, 0);
+        }
+        50% {
+          clip: rect(99px, 9999px, 53px, 0);
+        }
+        55% {
+          clip: rect(71px, 9999px, 41px, 0);
+        }
+        60% {
+          clip: rect(78px, 9999px, 52px, 0);
+        }
+        65% {
+          clip: rect(85px, 9999px, 49px, 0);
+        }
+        70% {
+          clip: rect(89px, 9999px, 65px, 0);
+        }
+        75% {
+          clip: rect(53px, 9999px, 54px, 0);
+        }
+        80% {
+          clip: rect(31px, 9999px, 90px, 0);
+        }
+        85% {
+          clip: rect(63px, 9999px, 94px, 0);
+        }
+        90% {
+          clip: rect(72px, 9999px, 11px, 0);
+        }
+        95% {
+          clip: rect(39px, 9999px, 33px, 0);
+        }
+        100% {
+          clip: rect(4px, 9999px, 59px, 0);
+        }
+      }
+      .dark-mode .glitch:before{
+        color: white;
+        background: black;
+      }
+      .glitch:before {
+        content: attr(data-text);
+        position: absolute;
+        left: -2px;
+        text-shadow: 1px 0 blue;
+        top: 0;
+        color: black;
+        background:white;
+        overflow: hidden;
+        clip: rect(0, 900px, 0, 0);
+        animation: noise-anim-2 3s infinite linear alternate-reverse;
+      }
+
+    /* ---Font Glitch--- */
+    
+    .mobile-nav{
+      display: block;
+    }
+
+    /* ---navbar--for--Mobile--- */
+    .navin-mobile{
+      text-decoration: none;
+    }
+
+  /* ---navbar--for--Mobile--- */
+
+  /* ----Three dots---- */
+  .dark-mode .threedots{
+    color: #c6c6c6;
+  }
+  .threedots{
+    position: absolute;
+    z-index: 5;
+    font-size:1.5rem;
+    margin-top: 5%;
+    margin-left: 85%;
+    background-color: transparent;
+    
+  }
+
+  /* ----Three dots---- */
+  
+  .threedots-menu{
+    display: none;
+  }
+  .mobile-nav-navbar{
+    display: none;
+  }
+  .threedots-menu .mobile-nav-navbar{
+    display:flex;
+  }
+
+  /*  */
+  /*  */
+  /* Add styles for the navigation menu */
+  .dark-mode .nav-menu{
+    background-color: #020a13;
+  }
+  .nav-menu {
+    height: 100%;
+    width: 100%;
+    background-color: white;
+    position: fixed;
+    top: 0;
+    left: -200%;
+    transition: left 0.5s;
+    z-index: 69;
+    display: flex;
+    margin-left:90%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Show the navigation menu */
+  .show-nav {
+    /* overflow: hidden; */
+    left: -90%;
+  }
+  .dark-mode .menu-btn{
+    color: #c6c6c6;
+  }
+  .menu-btn {
+    background-color: transparent;
+    color: black;
+    padding: 16px;
+    position: absolute;
+    top: 17px;
+    right: 10px;
+    border: none;
+    cursor: pointer;
+    z-index: 69;
+  }
+  .dark-mode a{
+    color: #c6c6c6;
+  }
+  a {
+  font-size: 30px;
+  text-decoration: none;
+  font-family: homelarge, sans-serif;
+  font-weight: 900;
+  color: black;
+}
+  /*  */
+  /*  */
+  .laptop-nav{
+    display: none;
+  }
+  
+
+  /* ---resume--view--download--- */
+  .dark-mode .resume-v-d{
+    color: #c6c6c6;
+  }
+
+  .resume-v-d{
+    text-decoration: none;
+    color: black;
+    font-weight: 200;
+    font-family: homebig, sans-serif;
+    font-size:medium;
+  }
+  .resume-v-d:hover{
+    text-decoration: underline;
+    color: #0056b3;
+  }
+  /* .p-font{
+    display: none;
+  } */
+  #p-font-mobile{
+    display: block;
+    line-height: 35px;
+    font-size: 15px;
+    font-family:homereg, sans-serif;
+    color: #545454;
+    
+  }
+  .iframediv{
+    display: none;
+  }
+  
+
+
+  .pdf-container {
+    position: relative;
+    padding-bottom: 75%;
+    height: 0;
+    overflow: hidden;
+  }
+  
+  .pdf-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+    
+
+  
+
+
+
+}
+/*  */
+/* ----For Mobile Resposives----- */

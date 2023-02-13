@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,700&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>Home | Manichandra</title>
+
+    <style>
+        @font-face{
+            font-family: Blorado;
+            src: url("fonts/codeword.otf");
+        }
+        @font-face {
+            font-family: home;
+            src: url("fonts/home.woff2");
+        }
+        @font-face {
+            font-family: homereg;
+            src: url("fonts/homeregular.otf");
+        }
+        @font-face {
+            font-family: homemid;
+            src: url("fonts/homemedium.otf");
+        }
+        @font-face {
+            font-family: homebig;
+            src: url("fonts/homelarge.otf");
+        }
+        /* body{
+            overflow-y: hidden;
+            overflow-x: hidden;
+        } */
+    </style>
+
+
+
+</head>
+<body>
+    <!--  -->
+    <div class="background-text1">
+        <div class="background-text2">
+            <p>Hello, There.</p>
+        </div>
+    </div>
+    <!--  -->
+    <div>
+        <a class="homesymbol"  href="index.html">MR.</a>
+    </div>
+    <div>
+        <p class="line"></p>
+    </div>
+    <!--  -->
+    <div class="laptop-nav">
+        <nav>
+            <ul>
+                <li><a id="cool-link" class="navin" href="/about.html">About</a></li>
+                <li><a id="cool-link" class="navin" href="/project.html">Project</a></li>
+                <li><a id="cool-link" class="navin" href="/resume.html">Resume</a></li>
+                <li><a id="cool-link" class="navin" href="/contact.html">Contact</a></li>
+                <li class="lii">
+                    <button class="darkbutton" style="border: none; cursor: pointer;" onclick="myMood()"> <i style="font-size:24px" class="fa">&#xf042;</i></button>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <!--  -->
+
+    <div class="mobile-nav">
+        
+            <!-- <button class="threedots" style="border: none;" onclick="toggleNav()"> <i style="font-size:24px" class="fa fa-bars"></i></button> -->
+            <div class="nav-menu">
+                <a href="/index.html" style="text-decoration: underline;">Home</a>
+                <br>
+                <a href="/about.html">About</a>
+                <br>
+                <a href="/project.html">Project</a>
+                <br>
+                <a href="/resume.html">Resume</a>
+                <br>
+                <a href="contact.html">Contact</a>
+                <br>
+                <button class="darkbutton" style="border: none; cursor: pointer;" onclick="myMood()"> <i style="font-size:24px" class="fa">&#xf042;</i></button>
+              </div>
+              
+              <button class="menu-btn" onclick="toggleNav()"><i style="font-size:24px" class="fa fa-bars"></i></button>
+        <!-- <nav class="mobile-nav-navbar">
+            <ul>
+                <li><a  class="navin-mobile" href="/about.html">About</a></li>
+                <li><a  class="navin-mobile" href="/project.html">Project</a></li>
+                <li><a  class="navin-mobile" href="/resume.html">Resume</a></li>
+                <li><a  class="navin-mobile" href="/contact.html">Contact</a></li>
+                <li class="lii">
+                    <button class="darkbutton" style="border: none; cursor: pointer;" onclick="myMood()"> <i style="font-size:24px" class="fa">&#xf042;</i></button>
+                </li>
+            </ul>
+        </nav> -->
+    </div>
+    
+    <div class="art">
+        <article>
+            <h1 class="glitch" id="glitch-laptop" data-text="I'm Manichandra M R">I'm Manichandra M R</h1>
+            <h1 class="glitch" id="glitch-mobile" data-text="I'm">I'm</h1>
+            <h1 class="glitch" id="glitch-mobile" data-text="Manichandra">Manichandra</h1>
+            <h1 class="glitch" id="glitch-mobile" data-text="M R">M R</h1>
+            <p class="p-fonts"></p>
+            <p class="p-font">Full-stack developer, Java developer, Gamer enthusiast,  Electronics and Communication Engineer, Practicing minimalist, and Ventage music in search of flow </p>
+            <p class="p-font">Working with my hands to make magic happen on the internet. View my
+                <a aria-label="Go to Projects Page" href="/project.html"><button type="button" tabindex="-1" class="buttons">Projects</button></a>, 
+                <a aria-label="Go to Resume Page" href="/resume.html"><button type="button" tabindex="-1" class="buttons">Resume</button></a>, 
+                <a aria-label="Go to Contact Page" href="/contact.html"><button type="button" tabindex="-1" class="buttons">Contact Me</button></a>, 
+                or send me an email at 
+                <button  style="cursor:crosshair; font-size: 14px;" title="Copy to clipboard" type="button" aria-label="Send an email" onclick="copyText()" class="buttons">manichandramr438@gmail.com</button>.
+            </p>
+        </article>
+        <footer class="p-foot">
+            <a class="achertag" aria-label="See More About Me" href="/about.html">
+                <span class="p-font">See More About Me </span>
+            </a>
+
+            <span class="arrow-ani" style="font-size: 20px;"><strong><a class="arrowa" href="/about.html"> &#8594; </a></strong> </span>
+        </footer>
+        <div class="icons">
+            <!-- Twitter -->
+            <span><a id="icons-single1" style="text-decoration: none;" class="fa" href="https://twitter.com/Manicha82336907?t=5lWEDBudWQX5tv5c8RflmA&s=08" target="_blank">&#xf099;</a></span>
+            <!-- Facebook -->
+            <span><a id="icons-single2" style="text-decoration: none;" class="fa" href="https://www.facebook.com/Manichandra438/" target="_blank">&#xf09a;</a></span>
+            <!-- linkedin -->
+            <span><a id="icons-single2" style="text-decoration: none;" class="fa" href="https://www.linkedin.com/in/manichandra-m-r-b65433187/" target="_blank">&#xf0e1;</a></span>
+            <!-- Instagram -->
+            <span><a id="icons-single2" style="text-decoration: none;" class="fa" href="https://www.instagram.com/manichandra_muthyala/" target="_blank">&#xf16d;</a></span>
+        </div>
+    </div>
+    <div>
+        
+    </div>
+</body>
+</html>
+
+
+
+
