@@ -141,7 +141,7 @@ body {
 /* ---Media key -- laptop--- */
 /*  */
 
-@media only screen and (min-width: 1008px){
+@media only screen and (min-width: 993px){
   /* ---backgrount text---*/
   .background-text1 {
     position: fixed;
@@ -245,6 +245,7 @@ body {
     margin-top: 3.5%;
     margin-left: 13%;
     white-space: nowrap;
+    font-weight:700;
   }
   .homesymbol:hover{
       cursor: pointer;
@@ -640,7 +641,7 @@ ul{
 
 
 
-@media only screen and (max-width: 1007px){
+@media only screen and (max-width: 992px){
     .background-text2{
         display: none;
     }
