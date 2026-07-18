@@ -53,12 +53,12 @@ export default function Hero() {
         </p>
 
         <h1
-          className="typewriter mt-3 text-2xl font-bold text-term-green sm:text-4xl"
+          className="typewriter-command mt-3 text-2xl font-bold text-term-green sm:text-4xl"
           style={
             {
               "--chars": personal.name.length,
-              "--type-duration": "0.6s",
-              animationDelay: "2.5s",
+              animationDelay: "2.5s, 2.5s, 3.1s",
+              animationDuration: "0.6s, 0.4s, 0.01s",
             } as React.CSSProperties
           }
         >
