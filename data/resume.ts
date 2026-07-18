@@ -98,7 +98,7 @@ export const projects: Project[] = [
       "Built a Farmer Hub: state/district-filtered government schemes, 7-day weather advisories with 25 rule-based farm alerts, live mandi prices from data.gov.in (Agmarknet), and a KYC-verified marketplace (license / GSTIN / Aadhaar) with 2% platform commission.",
       "Automated daily cron notifications (severe-weather alerts, mandi-price digests) and real-time order updates; localized in 7 Indian languages.",
     ],
-    link: "https://github.com/Manichandra438",
+    link: "https://github.com/Manichandra438/farmrent-app",
   },
   {
     name: "FitMate",
@@ -108,7 +108,7 @@ export const projects: Project[] = [
       "Offline-first Android app generating personalized calorie/protein/water targets with meal, exercise, water, and weight tracking.",
       "Firebase cloud sync via Google Sign-In and an Android home-screen widget for quick status.",
     ],
-    link: "https://github.com/Manichandra438",
+    link: "https://github.com/Manichandra438/FitMate",
   },
   {
     name: "ConvertMaster",
@@ -117,7 +117,7 @@ export const projects: Project[] = [
     bullets: [
       "All-in-one web app combining developer utilities with file conversion in a modern glassmorphism dark UI.",
     ],
-    link: "https://github.com/Manichandra438",
+    link: "https://github.com/Manichandra438/ConvertMaster",
   },
 ];
 
