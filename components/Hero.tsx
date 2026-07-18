@@ -12,7 +12,7 @@ const bootLines = [
 
 export default function Hero() {
   return (
-    <section className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 sm:pt-16">
+    <section className="mx-auto flex min-h-screen max-w-4xl flex-col justify-center px-4 py-10 sm:px-6">
       <TerminalWindow
         title={
           <span
@@ -20,8 +20,8 @@ export default function Hero() {
             style={
               {
                 "--chars": windowTitle.length,
-                animationDelay: "0.1s, 0.1s, 0.8s",
-                animationDuration: "0.7s, 0.4s, 0.01s",
+                animationDelay: "0.1s, 0.1s, 0.5s",
+                animationDuration: "0.4s, 0.3s, 0.01s",
               } as React.CSSProperties
             }
           >
@@ -31,7 +31,7 @@ export default function Hero() {
       >
         <div className="space-y-1 text-xs text-term-fg-dim sm:text-sm">
           {bootLines.map((line, i) => (
-            <p key={line} className="boot-line" style={{ animationDelay: `${0.9 + i * 0.25}s` }}>
+            <p key={line} className="boot-line" style={{ animationDelay: `${0.55 + i * 0.15}s` }}>
               {line}
             </p>
           ))}
@@ -43,8 +43,8 @@ export default function Hero() {
             style={
               {
                 "--chars": 6,
-                animationDelay: "1.9s, 1.9s, 2.3s",
-                animationDuration: "0.4s, 0.4s, 0.01s",
+                animationDelay: "1.05s, 1.05s, 1.3s",
+                animationDuration: "0.25s, 0.3s, 0.01s",
               } as React.CSSProperties
             }
           >
@@ -57,8 +57,8 @@ export default function Hero() {
           style={
             {
               "--chars": personal.name.length,
-              animationDelay: "2.5s, 2.5s, 3.1s",
-              animationDuration: "0.6s, 0.4s, 0.01s",
+              animationDelay: "1.45s, 1.45s, 1.75s",
+              animationDuration: "0.3s, 0.3s, 0.01s",
             } as React.CSSProperties
           }
         >
