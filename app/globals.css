@@ -132,6 +132,16 @@ body::before {
   animation: blink 1s steps(1) infinite;
 }
 
+.type-caret {
+  display: inline-block;
+  width: 0.5em;
+  height: 1em;
+  margin-left: 1px;
+  background: var(--term-green);
+  vertical-align: text-bottom;
+  animation: blink 0.8s step-end infinite;
+}
+
 @keyframes blink {
   50% {
     opacity: 0;
