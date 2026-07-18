@@ -3,6 +3,8 @@ import { personal } from "@/data/resume";
 import TerminalWindow from "./TerminalWindow";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
 
+const windowTitle = "manichandra@portfolio:~";
+
 const bootLines = [
   "Initializing session...",
   "Loading profile: manichandra...",
@@ -12,10 +14,25 @@ const bootLines = [
 export default function Hero() {
   return (
     <section className="mx-auto max-w-4xl px-4 pt-10 sm:px-6 sm:pt-16">
-      <TerminalWindow title="manichandra@portfolio:~">
+      <TerminalWindow
+        title={
+          <span
+            className="typewriter-command"
+            style={
+              {
+                "--chars": windowTitle.length,
+                animationDelay: "0.1s, 0.1s, 0.8s",
+                animationDuration: "0.7s, 0.4s, 0.01s",
+              } as React.CSSProperties
+            }
+          >
+            {windowTitle}
+          </span>
+        }
+      >
         <div className="space-y-1 text-xs text-term-fg-dim sm:text-sm">
           {bootLines.map((line, i) => (
-            <p key={line} className="boot-line" style={{ animationDelay: `${i * 0.25}s` }}>
+            <p key={line} className="boot-line" style={{ animationDelay: `${0.9 + i * 0.25}s` }}>
               {line}
             </p>
           ))}
@@ -27,7 +44,7 @@ export default function Hero() {
             style={
               {
                 "--chars": 6,
-                animationDelay: "0.9s, 0.9s, 1.3s",
+                animationDelay: "1.9s, 1.9s, 2.3s",
                 animationDuration: "0.4s, 0.4s, 0.01s",
               } as React.CSSProperties
             }
@@ -42,14 +59,14 @@ export default function Hero() {
             {
               "--chars": personal.name.length,
               "--type-duration": "0.6s",
-              animationDelay: "1.5s",
+              animationDelay: "2.5s",
             } as React.CSSProperties
           }
         >
           {personal.name}
         </h1>
 
-        <div className="reveal" style={{ animationDelay: "2.3s" }}>
+        <div className="reveal" style={{ animationDelay: "3.3s" }}>
           <p className="mt-2 text-base text-term-amber sm:text-lg">{personal.title}</p>
 
           <div className="mt-4 flex items-center gap-2 text-sm text-term-fg-dim">
