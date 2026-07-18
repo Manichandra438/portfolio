@@ -5,9 +5,11 @@ import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { personal } from "@/data/resume";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
 import TypedText from "./TypedText";
+import { useIntro } from "./IntroContext";
 
 export default function HeroTypedContent() {
   const [step, setStep] = useState(0);
+  const { skipped, completeNaturally } = useIntro();
 
   return (
     <>
@@ -16,6 +18,7 @@ export default function HeroTypedContent() {
           text={personal.title}
           startDelay={2.3}
           speed={70}
+          skip={skipped}
           onDone={() => setStep((s) => Math.max(s, 1))}
         />
       </p>
@@ -23,7 +26,12 @@ export default function HeroTypedContent() {
       {step >= 1 && (
         <div className="mt-4 flex items-center gap-2 text-sm text-term-fg-dim">
           <MapPin size={15} />
-          <TypedText text={personal.location} speed={70} onDone={() => setStep((s) => Math.max(s, 2))} />
+          <TypedText
+            text={personal.location}
+            speed={70}
+            skip={skipped}
+            onDone={() => setStep((s) => Math.max(s, 2))}
+          />
         </div>
       )}
 
@@ -32,7 +40,11 @@ export default function HeroTypedContent() {
           <TypedText
             text={personal.summary}
             speed={110}
-            onDone={() => setStep((s) => Math.max(s, 3))}
+            skip={skipped}
+            onDone={() => {
+              setStep((s) => Math.max(s, 3));
+              completeNaturally();
+            }}
           />
         </p>
       )}

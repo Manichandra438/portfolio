@@ -8,30 +8,40 @@ export default function TypedText({
   speed = 40,
   onDone,
   className = "",
+  skip = false,
 }: {
   text: string;
   startDelay?: number;
   speed?: number;
   onDone?: () => void;
   className?: string;
+  skip?: boolean;
 }) {
   const reduceMotion =
     typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const instant = reduceMotion || skip;
 
-  const [count, setCount] = useState(reduceMotion ? text.length : 0);
-  const [started, setStarted] = useState(reduceMotion || startDelay === 0);
+  const [count, setCount] = useState(instant ? text.length : 0);
+  const [started, setStarted] = useState(instant || startDelay === 0);
 
   useEffect(() => {
-    if (reduceMotion || startDelay === 0) return;
+    if (skip) {
+      setStarted(true);
+      setCount(text.length);
+    }
+  }, [skip, text.length]);
+
+  useEffect(() => {
+    if (instant || startDelay === 0) return;
     const t = setTimeout(() => setStarted(true), startDelay * 1000);
     return () => clearTimeout(t);
-  }, [startDelay, reduceMotion]);
+  }, [startDelay, instant]);
 
   useEffect(() => {
-    if (reduceMotion || !started || count >= text.length) return;
+    if (instant || !started || count >= text.length) return;
     const t = setTimeout(() => setCount((c) => c + 1), 1000 / speed);
     return () => clearTimeout(t);
-  }, [started, count, text, speed, reduceMotion]);
+  }, [started, count, text, speed, instant]);
 
   useEffect(() => {
     if (started && count >= text.length) onDone?.();
