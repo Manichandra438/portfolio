@@ -1,6 +1,7 @@
 @import "tailwindcss";
 
-:root {
+:root,
+[data-theme="matrix"] {
   --term-bg: #0b0f13;
   --term-bg-raised: #10161c;
   --term-border: #223040;
@@ -11,6 +12,54 @@
   --term-red: #ff5f56;
   --term-yellow: #ffbd2e;
   --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+}
+
+[data-theme="dracula"] {
+  --term-bg: #282a36;
+  --term-bg-raised: #2f3241;
+  --term-border: #44475a;
+  --term-fg: #f8f8f2;
+  --term-fg-dim: #9aa1c4;
+  --term-green: #50fa7b;
+  --term-amber: #ffb86c;
+  --term-red: #ff5555;
+  --term-yellow: #f1fa8c;
+}
+
+[data-theme="nord"] {
+  --term-bg: #2e3440;
+  --term-bg-raised: #363c4a;
+  --term-border: #4c566a;
+  --term-fg: #eceff4;
+  --term-fg-dim: #9aa7b9;
+  --term-green: #a3be8c;
+  --term-amber: #d08770;
+  --term-red: #bf616a;
+  --term-yellow: #ebcb8b;
+}
+
+[data-theme="powershell"] {
+  --term-bg: #012456;
+  --term-bg-raised: #023268;
+  --term-border: #1f4e86;
+  --term-fg: #f2f2f2;
+  --term-fg-dim: #8fb4e3;
+  --term-green: #3ddc97;
+  --term-amber: #ffcb6b;
+  --term-red: #ff6b6b;
+  --term-yellow: #ffd479;
+}
+
+[data-theme="amber"] {
+  --term-bg: #0d0b08;
+  --term-bg-raised: #1a1408;
+  --term-border: #3a2f12;
+  --term-fg: #ffcf7a;
+  --term-fg-dim: #a67c3d;
+  --term-green: #ffb454;
+  --term-amber: #ffcf7a;
+  --term-red: #ff6b4a;
+  --term-yellow: #ffd479;
 }
 
 @theme inline {
