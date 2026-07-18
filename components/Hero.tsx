@@ -21,21 +21,35 @@ export default function Hero() {
           ))}
         </div>
 
-        <p
-          className="prompt boot-line mt-4 text-term-fg-dim"
-          style={{ animationDelay: "0.85s" }}
-        >
-          whoami
+        <p className="prompt mt-4 text-term-fg-dim">
+          <span
+            className="typewriter-command"
+            style={
+              {
+                "--chars": 6,
+                animationDelay: "0.9s, 0.9s, 1.3s",
+                animationDuration: "0.4s, 0.4s, 0.01s",
+              } as React.CSSProperties
+            }
+          >
+            whoami
+          </span>
         </p>
 
         <h1
           className="typewriter mt-3 text-2xl font-bold text-term-green sm:text-4xl"
-          style={{ animationDelay: "1.1s", "--chars": personal.name.length } as React.CSSProperties}
+          style={
+            {
+              "--chars": personal.name.length,
+              "--type-duration": "0.6s",
+              animationDelay: "1.5s",
+            } as React.CSSProperties
+          }
         >
           {personal.name}
         </h1>
 
-        <div className="reveal" style={{ animationDelay: "2.5s" }}>
+        <div className="reveal" style={{ animationDelay: "2.3s" }}>
           <p className="mt-2 text-base text-term-amber sm:text-lg">{personal.title}</p>
 
           <div className="mt-4 flex items-center gap-2 text-sm text-term-fg-dim">

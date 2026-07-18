@@ -163,7 +163,33 @@ body::before {
   vertical-align: bottom;
   width: 0;
   border-right: 2px solid var(--term-green);
-  animation: typing 1s steps(var(--chars, 20), end) forwards, caret-blink 0.8s step-end infinite;
+  animation: typing var(--type-duration, 1s) steps(var(--chars, 20), end) forwards,
+    caret-blink 0.8s step-end infinite;
+}
+
+.typewriter.no-caret {
+  border-right: none;
+}
+
+/* Typewriter used for an intermediate "typed command" line — caret disappears once typing finishes,
+   instead of blinking forever, so it doesn't compete with the next line typing in. */
+.typewriter-command {
+  display: inline-block;
+  overflow: hidden;
+  white-space: nowrap;
+  vertical-align: bottom;
+  width: 0;
+  border-right: 2px solid var(--term-green);
+  animation-name: typing, caret-blink, hide-caret;
+  animation-timing-function: steps(var(--chars, 20), end), step-end, linear;
+  animation-fill-mode: forwards, none, forwards;
+  animation-iteration-count: 1, 3, 1;
+}
+
+@keyframes hide-caret {
+  to {
+    border-color: transparent;
+  }
 }
 
 @keyframes typing {
