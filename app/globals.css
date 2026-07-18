@@ -197,7 +197,7 @@ body::before {
     width: 0;
   }
   to {
-    width: var(--chars, 20)ch;
+    width: calc(var(--chars, 20) * 1ch);
   }
 }
 
@@ -247,7 +247,7 @@ body::before {
   }
 
   .typewriter {
-    width: var(--chars, 20)ch;
+    width: calc(var(--chars, 20) * 1ch);
     border-right: none;
   }
 }
