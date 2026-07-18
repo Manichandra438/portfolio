@@ -1,26 +1,88 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --term-bg: #0b0f13;
+  --term-bg-raised: #10161c;
+  --term-border: #223040;
+  --term-fg: #e6edf3;
+  --term-fg-dim: #8b98a5;
+  --term-green: #3ddc97;
+  --term-amber: #ffb454;
+  --term-red: #ff5f56;
+  --term-yellow: #ffbd2e;
+  --font-mono: "JetBrains Mono", ui-monospace, "SF Mono", Menlo, Consolas, monospace;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --color-term-bg: var(--term-bg);
+  --color-term-bg-raised: var(--term-bg-raised);
+  --color-term-border: var(--term-border);
+  --color-term-fg: var(--term-fg);
+  --color-term-fg-dim: var(--term-fg-dim);
+  --color-term-green: var(--term-green);
+  --color-term-amber: var(--term-amber);
+  --color-term-red: var(--term-red);
+  --color-term-yellow: var(--term-yellow);
+  --font-mono: var(--font-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+* {
+  scrollbar-color: var(--term-green) var(--term-bg);
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: var(--term-bg);
+  color: var(--term-fg);
+  font-family: var(--font-mono);
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  z-index: 50;
+  background: repeating-linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0.015) 0px,
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--term-bg);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--term-border);
+  border-radius: 6px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--term-green);
+}
+
+.blink-cursor::after {
+  content: "\2588";
+  margin-left: 2px;
+  color: var(--term-green);
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+.prompt::before {
+  content: "$ ";
+  color: var(--term-green);
 }
