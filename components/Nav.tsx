@@ -15,8 +15,10 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-40 border-b border-term-border bg-term-bg/90 backdrop-blur">
-      <div className="mx-auto flex max-w-4xl items-center justify-between gap-3 px-4 py-3 sm:px-6">
-        <span className="text-sm text-term-green">manichandra@portfolio:~$</span>
+      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-8">
+        <span className="shrink-0 text-sm text-term-green sm:text-base">
+          manichandra@portfolio:~$
+        </span>
 
         <div className="flex items-center gap-3 sm:hidden">
           <ThemeSwitcher />
@@ -29,13 +31,13 @@ export default function Nav() {
           </button>
         </div>
 
-        <div className="hidden items-center gap-5 sm:flex">
-          <ul className="flex gap-5 text-sm">
+        <div className="hidden items-center gap-8 sm:flex">
+          <ul className="flex flex-nowrap items-center gap-7 text-sm">
             {navCommands.map((c) => (
-              <li key={c.id}>
+              <li key={c.id} className="shrink-0">
                 <button
                   onClick={() => handleClick(c.id)}
-                  className="text-term-fg-dim transition-colors hover:text-term-green"
+                  className="whitespace-nowrap text-term-fg-dim transition-colors hover:text-term-green"
                 >
                   {c.label}
                 </button>

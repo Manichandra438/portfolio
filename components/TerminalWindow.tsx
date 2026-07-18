@@ -6,7 +6,7 @@ export default function TerminalWindow({
   children,
   className = "",
 }: {
-  title: string;
+  title: ReactNode;
   children: ReactNode;
   className?: string;
 }) {

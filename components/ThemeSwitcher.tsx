@@ -33,7 +33,7 @@ export default function ThemeSwitcher() {
     <div ref={ref} className="relative">
       <button
         onClick={() => setOpen((v) => !v)}
-        className="flex items-center gap-1.5 rounded-md border border-term-border px-2.5 py-1.5 text-xs text-term-fg-dim transition-colors hover:border-term-green hover:text-term-green"
+        className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md border border-term-border px-3 py-2 text-xs text-term-fg-dim transition-colors hover:border-term-green hover:text-term-green"
         aria-label="Change theme"
       >
         <Palette size={14} />
