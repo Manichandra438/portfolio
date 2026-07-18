@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState, ReactNode } from "react";
+import { useHeroReady } from "./HeroReadyContext";
 
 export default function Reveal({
   children,
@@ -10,7 +11,8 @@ export default function Reveal({
   className?: string;
 }) {
   const ref = useRef<HTMLDivElement>(null);
-  const [visible, setVisible] = useState(false);
+  const [intersecting, setIntersecting] = useState(false);
+  const { ready: heroReady } = useHeroReady();
 
   useEffect(() => {
     const el = ref.current;
@@ -19,7 +21,7 @@ export default function Reveal({
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
-          setVisible(true);
+          setIntersecting(true);
           observer.disconnect();
         }
       },
@@ -29,6 +31,8 @@ export default function Reveal({
     observer.observe(el);
     return () => observer.disconnect();
   }, []);
+
+  const visible = intersecting && heroReady;
 
   return (
     <div ref={ref} className={`scroll-reveal ${visible ? "is-visible" : ""} ${className}`}>

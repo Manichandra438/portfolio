@@ -5,9 +5,11 @@ import { Mail, Phone, MapPin, Download } from "lucide-react";
 import { personal } from "@/data/resume";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
 import TypedText from "./TypedText";
+import { useHeroReady } from "./HeroReadyContext";
 
 export default function HeroTypedContent() {
   const [step, setStep] = useState(0);
+  const { markReady } = useHeroReady();
 
   return (
     <>
@@ -29,7 +31,14 @@ export default function HeroTypedContent() {
 
       {step >= 2 && (
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-term-fg sm:text-base">
-          <TypedText text={personal.summary} speed={70} onDone={() => setStep((s) => Math.max(s, 3))} />
+          <TypedText
+            text={personal.summary}
+            speed={70}
+            onDone={() => {
+              setStep((s) => Math.max(s, 3));
+              markReady();
+            }}
+          />
         </p>
       )}
 
