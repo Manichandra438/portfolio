@@ -7,11 +7,10 @@ import Skills from "@/components/Skills";
 import Achievements from "@/components/Achievements";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
-import { IntroProvider } from "@/components/IntroContext";
 
 export default function Home() {
   return (
-    <IntroProvider>
+    <>
       <Nav />
       <main className="flex-1 pb-10">
         <Hero />
@@ -23,6 +22,6 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
-    </IntroProvider>
+    </>
   );
 }

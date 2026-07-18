@@ -261,20 +261,3 @@ body::before {
     border-right: none;
   }
 }
-
-/* Applied when the user skips the hero intro (e.g. by clicking a nav link before it finishes).
-   Scoped to only the intro's own animated elements — not a blanket override — so it doesn't
-   kill hover transitions, theme-switch fades, or scroll-reveal elsewhere on the page. */
-.skip-anim .boot-line,
-.skip-anim .reveal {
-  animation-duration: 0.01ms !important;
-  animation-delay: 0s !important;
-}
-
-.skip-anim .typewriter,
-.skip-anim .typewriter-command {
-  animation-duration: 0.01ms !important;
-  animation-delay: 0s !important;
-  width: calc(var(--chars, 20) * 1ch) !important;
-  border-right: none !important;
-}

@@ -4,15 +4,12 @@ import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { navCommands } from "@/data/resume";
 import ThemeSwitcher from "./ThemeSwitcher";
-import { useIntro } from "./IntroContext";
 
 export default function Nav() {
   const [open, setOpen] = useState(false);
-  const { done, skipIntro } = useIntro();
 
   const handleClick = (id: string) => {
     setOpen(false);
-    if (!done) skipIntro();
     document.getElementById(id)?.scrollIntoView({ behavior: "smooth" });
   };
 
