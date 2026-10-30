@@ -11,6 +11,9 @@ import Contact from "@/components/Contact";
 import { personal, experience } from "@/data/resume";
 import { siteUrl } from "@/data/site";
 
+// Re-render once a day so the experience counter in About stays current between deploys.
+export const revalidate = 86400;
+
 const personJsonLd = {
   "@context": "https://schema.org",
   "@type": "Person",

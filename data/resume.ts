@@ -8,12 +8,26 @@ export const personal = {
   resumeFile: "/Manichandra_MR_Resume_2026.pdf",
   tagline:
     "I build C# / .NET backends and Azure AI pipelines that turn messy vehicle-claim documents into clean, structured data.",
+  // {years} is replaced with whole years of experience at render time; see experienceSince().
   summary:
-    "Backend Software Engineer with 3+ years building and modernizing enterprise vehicle-claims platforms in C# / .NET at Solera. 4x Star of the Month awardee. Currently leading the cloud migration of a document-extraction service and building an Azure AI pipeline (Azure AI Document Intelligence + Azure OpenAI) that automates data extraction from estimate templates. Core strengths: REST API design, legacy modernization, high-volume file processing, production incident response, and AI-assisted developer tooling.",
+    "Backend Software Engineer with {years}+ years building and modernizing enterprise vehicle-claims platforms in C# / .NET at Solera. 4x Star of the Month awardee. Currently leading the cloud migration of a document-extraction service and building an Azure AI pipeline (Azure AI Document Intelligence + Azure OpenAI) that automates data extraction from estimate templates. Core strengths: REST API design, legacy modernization, high-volume file processing, production incident response, and AI-assisted developer tooling.",
 };
 
+// First day at Solera (Associate Software Engineer, May 2023). Months are 0-based.
+export const careerStart = new Date(2023, 4, 1);
+
+// Counts the start month as month one, so May 2023 -> Oct 2026 is 3 years 6 months.
+export function experienceSince(start: Date, now: Date = new Date()) {
+  const months = (now.getFullYear() - start.getFullYear()) * 12 + (now.getMonth() - start.getMonth()) + 1;
+  return { years: Math.floor(months / 12), months: months % 12 };
+}
+
+export function formatExperience({ years, months }: { years: number; months: number }) {
+  return months === 0 ? `${years} yrs` : `${years} yrs ${months} mos`;
+}
+
+// About.tsx prepends a live "years of experience" tile computed from careerStart.
 export const impact: { value: string; label: string }[] = [
-  { value: "3+ yrs", label: "enterprise .NET at Solera" },
   { value: "4x", label: "Star of the Month" },
   { value: "72", label: "servers migrated, zero data loss" },
   { value: "30%", label: "cost cut via OnBase REST integration" },
