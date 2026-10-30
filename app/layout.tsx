@@ -20,13 +20,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manichandra M R — Backend .NET Developer",
+  title: "Manichandra M R — .NET & AI-Powered Claims Solutions",
   description:
-    "Portfolio of Manichandra M R, Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in REST APIs, legacy modernization, and Azure AI pipelines.",
+    "Portfolio of Manichandra M R, Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in Azure AI document extraction, REST APIs, legacy modernization, and cloud migration.",
   openGraph: {
-    title: "Manichandra M R — Backend .NET Developer",
+    title: "Manichandra M R — .NET & AI-Powered Claims Solutions",
     description:
-      "Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in REST APIs, legacy modernization, and Azure AI pipelines.",
+      "Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in Azure AI document extraction, REST APIs, legacy modernization, and cloud migration.",
     type: "website",
   },
 };
