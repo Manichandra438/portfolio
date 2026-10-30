@@ -1,4 +1,4 @@
-import { Mail, Phone } from "lucide-react";
+import { Mail } from "lucide-react";
 import { personal } from "@/data/resume";
 import TerminalWindow from "./TerminalWindow";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
@@ -20,12 +20,6 @@ export default function Contact() {
               className="flex items-center gap-3 text-term-fg transition-colors hover:text-term-green"
             >
               <Mail size={16} className="text-term-green" /> {personal.email}
-            </a>
-            <a
-              href={`tel:${personal.phone.replace(/\s/g, "")}`}
-              className="flex items-center gap-3 text-term-fg transition-colors hover:text-term-green"
-            >
-              <Phone size={16} className="text-term-green" /> {personal.phone}
             </a>
             <a
               href={personal.linkedin}

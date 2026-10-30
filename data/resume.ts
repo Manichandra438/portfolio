@@ -2,13 +2,71 @@ export const personal = {
   name: "Manichandra M R",
   title: "Software Engineer II | .NET & AI-Powered Claims Solutions",
   location: "Bengaluru, India",
-  phone: "+91 63620 71442",
   email: "manichandramr438@gmail.com",
   linkedin: "https://linkedin.com/in/manichandra-m-r-b65433187",
   github: "https://github.com/Manichandra438",
   resumeFile: "/Manichandra_MR_Resume_2026.pdf",
+  tagline:
+    "I build C# / .NET backends and Azure AI pipelines that turn messy vehicle-claim documents into clean, structured data.",
   summary:
     "Backend Software Engineer with 3+ years building and modernizing enterprise vehicle-claims platforms in C# / .NET at Solera. 4x Star of the Month awardee. Currently leading the cloud migration of a document-extraction service and building an Azure AI pipeline (Azure AI Document Intelligence + Azure OpenAI) that automates data extraction from estimate templates. Core strengths: REST API design, legacy modernization, high-volume file processing, production incident response, and AI-assisted developer tooling.",
+};
+
+export const impact: { value: string; label: string }[] = [
+  { value: "3+ yrs", label: "enterprise .NET at Solera" },
+  { value: "4x", label: "Star of the Month" },
+  { value: "72", label: "servers migrated, zero data loss" },
+  { value: "30%", label: "cost cut via OnBase REST integration" },
+  { value: "9 TB", label: "file-share data cleaned up safely" },
+  { value: "5", label: "enterprise clients onboarded" },
+];
+
+export const caseStudy = {
+  title: "AI document-extraction pipeline",
+  context: "Solera · HyperQuest · Software Engineer II (2025 - present)",
+  problem:
+    "Claim packages arrive as a mix of BMS XML, PDFs, scans, images, HTML, and ZIPs, in many different estimate templates. Reviewers keyed the important numbers in by hand.",
+  role: "Leading the cloud migration of the extraction service and building its Azure AI pipeline end to end.",
+  pipeline: [
+    { step: "S3 intake", detail: "Claim packages: BMS XML + PDF, TIFF, JPG, HTML, ZIP" },
+    { step: "Hangfire job", detail: "Unpack the package and convert every page to an image" },
+    { step: "OCR + layout", detail: "Azure AI Document Intelligence, template detection (Mitchell, CCC, Audatex)" },
+    { step: "Azure OpenAI", detail: "Classify pages; extract header, totals, line items with consensus voting" },
+    { step: "Validate", detail: "VIN validation, labour-hour and estimate / tow-bill reconciliation" },
+    { step: "STP decision", detail: "Auto-complete the claim, or route to human review with clear reasons" },
+    { step: "SQL Server", detail: "Structured EMS data saved in a single transaction" },
+  ],
+  highlights: [
+    {
+      heading: "Reliability",
+      text: "Retries and a circuit breaker on AI calls, CancellationToken propagation, parallel AI calls, honest failure reporting, and liveness / readiness probes for SQL Server, S3, and the AI endpoint.",
+    },
+    {
+      heading: "Cost",
+      text: "Prompt and OCR-payload trimming plus AI response caching to cut tokens per document. GPT-5 reasoning-model support.",
+    },
+    {
+      heading: "Delivery",
+      text: "Docker on Rancher Kubernetes with autoscaling, Vault-managed secrets, GitHub Actions CI/CD for QAE, CAE, and PRD with one-click rollback, New Relic APM, and a passing SonarQube gate.",
+    },
+    {
+      heading: "Tooling",
+      text: "HQ Prompt Tester, an internal app to compare Azure OpenAI models side by side on accuracy, tokens, and speed, plus a failed-claims review to re-run extractions.",
+    },
+  ],
+  stack: [
+    "ASP.NET Core Web API",
+    "Hangfire",
+    "Azure OpenAI",
+    "Azure AI Document Intelligence",
+    "SQL Server",
+    "S3",
+    "Docker",
+    "Kubernetes (Rancher)",
+    "GitHub Actions",
+    "HashiCorp Vault",
+  ],
+  note: "Internal system: described at a high level, no proprietary code or data.",
 };
 
 export const skills: { category: string; items: string[] }[] = [
@@ -203,6 +261,7 @@ export const education = {
 export const navCommands = [
   { id: "about", label: "whoami" },
   { id: "experience", label: "experience --log" },
+  { id: "case-study", label: "case-study" },
   { id: "projects", label: "projects --ls" },
   { id: "skills", label: "skills --list" },
   { id: "contact", label: "contact --send" },

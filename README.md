@@ -20,6 +20,12 @@ touch JSX for copy changes.
 To swap the downloadable resume, replace `public/Manichandra_MR_Resume_2026.pdf` and update
 `resumeFile` in `data/resume.ts` if the filename changes.
 
+## Site URL
+
+Canonical URL, sitemap, robots.txt, and the social preview image use the Vercel production
+domain automatically (`VERCEL_PROJECT_PRODUCTION_URL`). After adding a custom domain, set
+`NEXT_PUBLIC_SITE_URL` (e.g. `https://example.com`) in the Vercel project's environment variables.
+
 ## Build
 
 ```bash

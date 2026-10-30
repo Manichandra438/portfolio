@@ -6,13 +6,14 @@ import { themes, defaultTheme, themeStorageKey, type ThemeId } from "@/data/them
 
 export default function ThemeSwitcher() {
   const [open, setOpen] = useState(false);
-  const [active, setActive] = useState<ThemeId>(defaultTheme);
+  // The theme-init script in layout.tsx sets data-theme before hydration, so read it from there.
+  // The checkmark only renders once the menu is opened, so this can't cause a hydration mismatch.
+  const [active, setActive] = useState<ThemeId>(() =>
+    typeof document === "undefined"
+      ? defaultTheme
+      : ((document.documentElement.getAttribute("data-theme") as ThemeId | null) ?? defaultTheme)
+  );
   const ref = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    const stored = window.localStorage.getItem(themeStorageKey) as ThemeId | null;
-    if (stored) setActive(stored);
-  }, []);
 
   useEffect(() => {
     const onClick = (e: MouseEvent) => {
