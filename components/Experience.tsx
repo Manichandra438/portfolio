@@ -1,6 +1,7 @@
 import { experience } from "@/data/resume";
 import TerminalWindow from "./TerminalWindow";
 import Reveal from "./Reveal";
+import BulletList from "./BulletList";
 
 export default function Experience() {
   return (
@@ -20,14 +21,7 @@ export default function Experience() {
                 <span className="absolute -left-[26px] top-1 h-2.5 w-2.5 rounded-full bg-term-green" />
                 <p className="text-sm font-semibold text-term-amber sm:text-base">{role.role}</p>
                 <p className="text-xs text-term-fg-dim">{role.period}</p>
-                <ul className="mt-3 space-y-2">
-                  {role.bullets.map((b, i) => (
-                    <li key={i} className="flex gap-2 text-sm leading-relaxed text-term-fg">
-                      <span className="mt-1 text-term-green">&gt;</span>
-                      <span>{b}</span>
-                    </li>
-                  ))}
-                </ul>
+                <BulletList bullets={role.bullets} />
               </div>
             ))}
           </div>

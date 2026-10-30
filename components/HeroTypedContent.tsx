@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import { Mail, Phone, MapPin, Download } from "lucide-react";
+import { Mail, MapPin, Download } from "lucide-react";
 import { personal } from "@/data/resume";
 import { GithubIcon, LinkedinIcon } from "./icons/Brand";
 import TypedText from "./TypedText";
@@ -30,8 +30,8 @@ export default function HeroTypedContent() {
       {step >= 2 && (
         <p className="mt-5 max-w-2xl text-sm leading-relaxed text-term-fg sm:text-base">
           <TypedText
-            text={personal.summary}
-            speed={110}
+            text={personal.tagline}
+            speed={80}
             onDone={() => setStep((s) => Math.max(s, 3))}
           />
         </p>
@@ -47,18 +47,11 @@ export default function HeroTypedContent() {
             <Mail size={15} /> {personal.email}
           </a>
           <a
-            href={`tel:${personal.phone.replace(/\s/g, "")}`}
-            className="reveal flex items-center gap-2 rounded-md border border-term-border px-3 py-2 text-term-fg transition-colors hover:border-term-green hover:text-term-green"
-            style={{ animationDelay: "0.08s" }}
-          >
-            <Phone size={15} /> {personal.phone}
-          </a>
-          <a
             href={personal.linkedin}
             target="_blank"
             rel="noopener noreferrer"
             className="reveal flex items-center gap-2 rounded-md border border-term-border px-3 py-2 text-term-fg transition-colors hover:border-term-green hover:text-term-green"
-            style={{ animationDelay: "0.16s" }}
+            style={{ animationDelay: "0.08s" }}
           >
             <LinkedinIcon size={15} /> LinkedIn
           </a>
@@ -67,7 +60,7 @@ export default function HeroTypedContent() {
             target="_blank"
             rel="noopener noreferrer"
             className="reveal flex items-center gap-2 rounded-md border border-term-border px-3 py-2 text-term-fg transition-colors hover:border-term-green hover:text-term-green"
-            style={{ animationDelay: "0.24s" }}
+            style={{ animationDelay: "0.16s" }}
           >
             <GithubIcon size={15} /> GitHub
           </a>
@@ -75,7 +68,7 @@ export default function HeroTypedContent() {
             href={personal.resumeFile}
             download
             className="reveal flex items-center gap-2 rounded-md border border-term-green bg-term-green/10 px-3 py-2 text-term-green transition-colors hover:bg-term-green/20"
-            style={{ animationDelay: "0.32s" }}
+            style={{ animationDelay: "0.24s" }}
           >
             <Download size={15} /> Resume
           </a>

@@ -3,6 +3,8 @@ import { JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { themeStorageKey } from "@/data/themes";
+import { personal } from "@/data/resume";
+import { siteUrl, siteTitle, siteDescription } from "@/data/site";
 
 const themeInitScript = `
 (function () {
@@ -20,14 +22,32 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Manichandra M R — Backend .NET Developer",
-  description:
-    "Portfolio of Manichandra M R, Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in REST APIs, legacy modernization, and Azure AI pipelines.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
+  authors: [{ name: personal.name, url: personal.github }],
+  keywords: [
+    "Manichandra M R",
+    ".NET developer",
+    "C#",
+    "ASP.NET Core",
+    "Azure OpenAI",
+    "Azure AI Document Intelligence",
+    "Backend engineer",
+    "Bengaluru",
+  ],
+  alternates: { canonical: "/" },
   openGraph: {
-    title: "Manichandra M R — Backend .NET Developer",
-    description:
-      "Software Engineer II at Solera Holdings. Backend .NET / C# developer specializing in REST APIs, legacy modernization, and Azure AI pipelines.",
-    type: "website",
+    title: siteTitle,
+    description: siteDescription,
+    url: "/",
+    siteName: personal.name,
+    type: "profile",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
   },
 };
 
