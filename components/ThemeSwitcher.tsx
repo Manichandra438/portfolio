@@ -4,15 +4,16 @@ import { useEffect, useRef, useState } from "react";
 import { Palette, Check } from "lucide-react";
 import { themes, defaultTheme, themeStorageKey, type ThemeId } from "@/data/themes";
 
+// The theme-init script in layout.tsx sets data-theme before hydration, so read it from there.
+// The checkmark only renders once the menu is opened, so this can't cause a hydration mismatch.
+function readActiveTheme(): ThemeId {
+  if (typeof document === "undefined") return defaultTheme;
+  return (document.documentElement.getAttribute("data-theme") as ThemeId | null) ?? defaultTheme;
+}
+
 export default function ThemeSwitcher() {
   const [open, setOpen] = useState(false);
-  // The theme-init script in layout.tsx sets data-theme before hydration, so read it from there.
-  // The checkmark only renders once the menu is opened, so this can't cause a hydration mismatch.
-  const [active, setActive] = useState<ThemeId>(() =>
-    typeof document === "undefined"
-      ? defaultTheme
-      : ((document.documentElement.getAttribute("data-theme") as ThemeId | null) ?? defaultTheme)
-  );
+  const [active, setActive] = useState<ThemeId>(readActiveTheme);
   const ref = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -33,7 +34,11 @@ export default function ThemeSwitcher() {
   return (
     <div ref={ref} className="relative">
       <button
-        onClick={() => setOpen((v) => !v)}
+        onClick={() => {
+          // Nav renders one switcher per layout, so the theme may have changed in the other one.
+          setActive(readActiveTheme());
+          setOpen((v) => !v);
+        }}
         className="flex shrink-0 items-center gap-2 whitespace-nowrap rounded-md border border-term-border px-3 py-2 text-xs text-term-fg-dim transition-colors hover:border-term-green hover:text-term-green"
         aria-label="Change theme"
       >

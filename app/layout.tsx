@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { JetBrains_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
-import { themeStorageKey } from "@/data/themes";
+import { themes, themeStorageKey } from "@/data/themes";
 import { personal } from "@/data/resume";
 import { siteUrl, siteTitle, siteDescription } from "@/data/site";
 
@@ -10,7 +10,7 @@ const themeInitScript = `
 (function () {
   try {
     var t = localStorage.getItem("${themeStorageKey}");
-    if (t) document.documentElement.setAttribute("data-theme", t);
+    if (${JSON.stringify(themes.map((t) => t.id))}.indexOf(t) !== -1) document.documentElement.setAttribute("data-theme", t);
   } catch (e) {}
 })();
 `;
