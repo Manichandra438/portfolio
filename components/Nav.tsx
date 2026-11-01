@@ -15,12 +15,12 @@ export default function Nav() {
 
   return (
     <nav className="sticky top-0 z-40 border-b border-term-border bg-term-bg/90 backdrop-blur">
-      <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-4 sm:px-8">
+      <div className="mx-auto flex max-w-7xl items-center justify-between gap-4 px-4 py-4 sm:px-8">
         <span className="shrink-0 text-sm text-term-green sm:text-base">
           manichandra@portfolio:~$
         </span>
 
-        <div className="flex items-center gap-3 sm:hidden">
+        <div className="flex items-center gap-3 xl:hidden">
           <ThemeSwitcher />
           <button
             className="text-term-fg"
@@ -31,7 +31,7 @@ export default function Nav() {
           </button>
         </div>
 
-        <div className="hidden items-center gap-8 sm:flex">
+        <div className="hidden items-center gap-8 xl:flex">
           <ul className="flex flex-nowrap items-center gap-7 text-sm">
             {navCommands.map((c) => (
               <li key={c.id} className="shrink-0">
@@ -49,7 +49,7 @@ export default function Nav() {
       </div>
 
       {open && (
-        <ul className="flex flex-col gap-1 border-t border-term-border px-4 pb-4 text-sm sm:hidden">
+        <ul className="flex flex-col gap-1 border-t border-term-border px-4 pb-4 text-sm sm:px-8 xl:hidden">
           {navCommands.map((c) => (
             <li key={c.id}>
               <button
