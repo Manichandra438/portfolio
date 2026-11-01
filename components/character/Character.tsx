@@ -23,11 +23,11 @@ const setHidden = (hidden: boolean) => {
   listeners.forEach((fn) => fn());
 };
 
-// Skip it on data-saver connections: the 3D library is a sizable download for a decoration.
+// Skip it on data-saver connections: it's a decoration, so it shouldn't spend the visitor's data.
 const saveData = () =>
   (navigator as Navigator & { connection?: { saveData?: boolean } }).connection?.saveData === true;
 
-/* Decorative, so it's hidden from screen readers. The 3D code only loads after the page has finished loading. */
+/* Decorative, so it's hidden from screen readers. Its code and image only load after the page has finished loading. */
 export default function Character() {
   const hidden = useSyncExternalStore(subscribe, readHidden, () => null);
   const canvasRef = useRef<HTMLCanvasElement>(null);
@@ -42,10 +42,11 @@ export default function Character() {
     let stop: (() => void) | undefined;
     const load = () => {
       import("./controller")
-        .then(({ startCharacter }) => {
-          if (!cancelled) stop = startCharacter(canvas, bubble);
+        .then(async ({ startCharacter, loadSheet }) => {
+          const sheet = await loadSheet();
+          if (!cancelled) stop = startCharacter(canvas, bubble, sheet);
         })
-        // No WebGL, or the download failed. The site works the same without the character.
+        // The download failed. The site works the same without the character.
         .catch(() => {});
     };
     const whenIdle = () => (window.requestIdleCallback ? window.requestIdleCallback(load) : setTimeout(load, 200));
@@ -65,7 +66,7 @@ export default function Character() {
     <>
       {!hidden && (
         <div aria-hidden="true">
-          <canvas ref={canvasRef} className="pointer-events-none fixed left-0 top-0 z-30" />
+          <canvas ref={canvasRef} className="pointer-events-none fixed left-0 top-0 z-30 [image-rendering:pixelated]" />
           <div
             ref={bubbleRef}
             className="pointer-events-none fixed left-0 top-0 z-30 w-max max-w-[230px] rounded bg-term-fg px-2 py-1 text-xs leading-snug text-term-bg opacity-0 transition-opacity"

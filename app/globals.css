@@ -155,7 +155,7 @@ body::before {
 
 /* Room above each window for the character to stand without covering the window before it. */
 main > section[id] {
-  padding-top: 7rem;
+  padding-top: 7.75rem;
 }
 
 @media (max-width: 639px) {

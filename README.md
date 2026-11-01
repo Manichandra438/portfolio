@@ -20,9 +20,10 @@ touch JSX for copy changes.
 To swap the downloadable resume, replace `public/Manichandra_MR_Resume_2026.pdf` and update
 `resumeFile` in `data/resume.ts` if the filename changes.
 
-The animated character's comments and tips live in [`data/character.ts`](data/character.ts). Its
-3D model and motion are in [`components/character/`](components/character/), and that code only
-downloads after the page has loaded.
+The animated character's comments, tips, and sprite positions live in
+[`data/character.ts`](data/character.ts). Its poses are in `public/character-atlas.png`, and its
+movement is in [`components/character/`](components/character/). Both only download after the page
+has loaded.
 
 ## Site URL
 
