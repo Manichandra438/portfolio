@@ -8,6 +8,7 @@ import Skills from "@/components/Skills";
 import Achievements from "@/components/Achievements";
 import Education from "@/components/Education";
 import Contact from "@/components/Contact";
+import Character from "@/components/character/Character";
 import { personal, experience } from "@/data/resume";
 import { siteUrl } from "@/data/site";
 
@@ -47,6 +48,7 @@ export default function Home() {
         <Education />
         <Contact />
       </main>
+      <Character />
     </>
   );
 }

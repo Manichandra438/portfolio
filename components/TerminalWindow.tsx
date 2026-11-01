@@ -12,6 +12,7 @@ export default function TerminalWindow({
 }) {
   return (
     <div
+      data-terminal-window
       className={`rounded-lg border border-term-border bg-term-bg-raised shadow-[0_0_0_1px_rgba(0,0,0,0.2)] overflow-hidden ${className}`}
     >
       <div className="flex items-center justify-between border-b border-term-border bg-black/30 pl-3 pr-0 py-0">

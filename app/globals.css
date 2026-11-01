@@ -153,6 +153,17 @@ body::before {
   color: var(--term-green);
 }
 
+/* Room above each window for the character to stand without covering the window before it. */
+main > section[id] {
+  padding-top: 7rem;
+}
+
+@media (max-width: 639px) {
+  main > section[id] {
+    padding-top: 5.5rem;
+  }
+}
+
 /* Boot sequence */
 .boot-line {
   opacity: 0;
