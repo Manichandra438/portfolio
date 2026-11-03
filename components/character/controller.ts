@@ -27,7 +27,7 @@ const WALK: FrameName[] = ["walk1", "walk2", "walk4", "walk3"];
 const WALK_FPS = 4.5;
 // Pixels per second at full size, roughly matching the stride so the planted foot doesn't skate.
 const WALK_SPEED = 72;
-// Below this many px between windows the character jumps across; farther, it drops in from the top of the screen.
+// Going down, below this many px the character jumps across; farther, it drops in from the top of the screen.
 const farJump = () => innerHeight * 0.9;
 // Random thoughts: how many per visit, and how far apart in seconds.
 const MAX_THOUGHTS = 6;
@@ -141,9 +141,14 @@ export function startCharacter(canvas: HTMLCanvasElement, bubble: HTMLElement, s
     }
     const size = FIGURE * scale;
     const dy = floor - fromY;
-    if (onScreen && Math.abs(dy) <= farJump()) {
-      const arc = dy < 0 ? Math.abs(dy) * 0.12 + size * 0.35 : size * 0.2;
-      jump = { t: 0, crouch: 0.16, air: 0.5 + 0.25 * Math.sqrt(Math.abs(dy) / size), land: 0.2, x0: x, y0: fromY, x1: toX, y1: floor, arc, dusted: false, id };
+    if (dy < 0) {
+      // Going up is always a jump up. If the character is off screen, it leaps in from the bottom of the screen.
+      const startY = onScreen ? fromY : scrollY + innerHeight + size * 0.1;
+      const rise = startY - floor;
+      jump = { t: 0, crouch: onScreen ? 0.16 : 0, air: Math.min(1, 0.5 + 0.25 * Math.sqrt(rise / size)), land: 0.2, x0: onScreen ? x : toX, y0: startY, x1: toX, y1: floor, arc: size * 0.45, dusted: false, id };
+      if (!onScreen) x = toX;
+    } else if (onScreen && dy <= farJump()) {
+      jump = { t: 0, crouch: 0.16, air: 0.5 + 0.25 * Math.sqrt(dy / size), land: 0.2, x0: x, y0: fromY, x1: toX, y1: floor, arc: size * 0.2, dusted: false, id };
     } else {
       // Too far to jump believably: drop in from above the screen, already in the air.
       const top = scrollY - size * 0.2;
